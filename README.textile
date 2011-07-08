@@ -1,0 +1,18 @@
+h1. IP Whitelist Middleware
+
+h2. About
+
+Rack Middleware for websites that need to contain access to a group of ip addresses (a whitelist). 
+Outside these addresses, vistors are shown 403 Forbidden page.
+
+h3. Usage
+
+h4. Rails 3
+
+in Gemfile
+
+@gem 'rack-ip-whitelist'@
+
+in config/application.rb
+
+@config.middleware.use Rack::IpWhiteList, %w(55.44.22.11 55.44.11.22) # array of whitelisted addresses%@
