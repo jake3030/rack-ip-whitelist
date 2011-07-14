@@ -16,7 +16,8 @@ module Rack
     end
     
     def white_listed?(env)
-      Rails.env.production? ? @ip_addresses.include?(env["REMOTE_IP"]) : true
+      Rails.logger.info "WHITELIST: ENV: #{env["REMOTE_ADDR"].inspect}"
+      Rails.env.production? ? @ip_addresses.include?(env["REMOTE_ADDR"]) : true
     end
   end
 end
