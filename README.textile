@@ -15,4 +15,4 @@ in Gemfile
 
 in config/application.rb
 
-@config.middleware.use Rack::IpWhiteList, %w(55.44.22.11 55.44.11.22) # array of whitelisted addresses%@
+@config.middleware.use Rack::IpWhitelist, %w(55.44.22.11 55.44.11.22) # array of whitelisted addresses%@
